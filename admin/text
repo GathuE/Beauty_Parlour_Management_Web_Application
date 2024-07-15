@@ -1,0 +1,34 @@
+ <h4 class="dash-widget-info text-left"  name="" id="productretainer" ></h4>
+
+
+ <?php if($result->points < 50 ){
+
+} elseif($result->points >= 50){
+                                                
+ } ?>
+
+
+ (!isset($_POST['submit'])){
+   // create new PDF document
+$pdf = new TCPDF('P','mm','A4');
+$pdf->SetPrintHeader(false);
+$pdf->SetPrintFooter(false);
+$pdf->AddPage();
+$pdf->writeHTMLCell(0, 0, '', '', ' Employee Performance  <hr />', 0, 0, 0, true, '', true);
+
+$html .= '<table border ="0.2"  cellspacing="0" style="text-align:center; font-size:10px; color:purple; line-height:15px; width:100%;">
+      <tr>
+      <td>No data Found !!</td>
+    </tr>
+			';
+    
+      
+      // Generate from database
+
+$html .="</table>";
+$pdf->Ln(12);
+$pdf->writeHTML($html);
+$title = "Employee Performance Report";
+ $pdf->SetTitle($title);
+ob_end_clean();
+$pdf->Output("Performance.pdf"); //rename your file generated here
