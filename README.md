@@ -12,6 +12,11 @@ Achievements:
     4. Created a customer reward module that awards points based on the amount spent on services, allowing clients to redeem points for specific services.
     5.Implemented periodic data backup, enabling the download of client data in a MySQL database for safekeeping.
 
+The project url is https://parlour.softtouchtech.co.ke.
+
+Login Credentials : username -> admin
+                    password -> 123456
+
 Technologies Used:
 HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, TCPDF
 
